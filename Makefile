@@ -1,5 +1,5 @@
 all:
-	echo 'Run "make install" to install Pacman-ZFS-Hook'
+	@echo 'Run "make install" to install Pacman-ZFS-Hook'
 
 install:
 	mkdir -p $(DESTDIR)/usr/share/libalpm/{hooks,scripts}
