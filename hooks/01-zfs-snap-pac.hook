@@ -9,7 +9,6 @@ Target = *
 
 [Action]
 Description = Create ZFS Snapshot on Pacman Updates
-Depends = pacman-zfs-hook
 When = PreTransaction
 Exec = /usr/share/libalpm/scripts/zfs-snap-pac
 NeedsTargets
