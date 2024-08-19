@@ -7,15 +7,14 @@
 set -e
 
 bootfs="none"
-snapshotName="zfs-snap-pac-1-"
 
 GetBootFS() {
     bootfs=$(zpool get bootfs -o value -pH | grep -v '-' | tail -n1)
 }
 
 GetSnapshotName() {
-    local time=$(date +%s)
-    snapshotName="$snapshotName$time"
+    local time=$(date +%F-%T)
+    snapshotName="$time"
 }
 
 CreateSnapshot() {
